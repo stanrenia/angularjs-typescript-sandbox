@@ -10,7 +10,7 @@ export function mainConfig($stateProvider: StateProvider) {
         template: require('./main.html'),
         controller: MainCtrl,
         controllerAs: 'mainCtrl'
-    }
+    };
 
     const helloState: Ng1StateDeclaration = {
         name: "hello",
@@ -20,11 +20,11 @@ export function mainConfig($stateProvider: StateProvider) {
             count: () => {
                 return new Promise((resolve, reject) => {
                     resolve(3);
-                }) 
+                })
             }
         }
-    }
+    };
 
-    $stateProvider.state(mainState)
-    $stateProvider.state(helloState)
+    $stateProvider.state(mainState);
+    $stateProvider.state(helloState);
 }

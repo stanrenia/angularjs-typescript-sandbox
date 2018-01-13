@@ -4,16 +4,40 @@
 <head>
     <meta charset="UTF-8">
     <title>Angular With React</title>
+    <style>
+        .sum {
+            width: 70%;
+            word-wrap: break-word;
+        }
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        .cell-container {
+            flex-grow: 1;
+            border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /*text-align: center;*/
+        }
+
+        .cell-input {
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
     <div>
-        <h1>Appli de test des familles!</h2>
+        <h1>Appli de test des familles!</h1>
     </div>
     <div>
         <a ui-sref="main" ui-sref-active="active">Main</a>
         <a ui-sref="hello" ui-sref-active="active">Hello</a>
-        
+
         <ui-view></ui-view>
     </div>
 </body>

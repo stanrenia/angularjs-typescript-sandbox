@@ -1,4 +1,24 @@
 <div>
     <h2>Main View</h2>
     <h3>{{ mainCtrl.title }}</h3>
+    <div>
+        <label>Nombre de cellules</label>
+        <input type="number" ng-model="mainCtrl.cellsCount"/>
+        <button type="button" ng-click="mainCtrl.addCell()">ADD</button>
+        <button type="button" ng-click="mainCtrl.removeCell()">DEL</button>
+    </div>
+    <div>
+        <label>Nombre ajouté automatiquement</label>
+        <input type="number" ng-model="mainCtrl.cellsToAddInAutoMode"/>
+        <button type="button" ng-click="mainCtrl.toggleAuto()">
+            <span ng-show="!mainCtrl.isAutoEnabled">ENABLE AUTO ADD</span>
+            <span ng-show="mainCtrl.isAutoEnabled">DISABLE AUTO ADD</span>
+        </button>
+    </div>
+    <div>
+        <p class="sum">{{ mainCtrl.cellSum() }}</p>
+    </div>
+    <div class="grid">
+        <cell ng-repeat="cell in mainCtrl.cells" value="cell.value"></cell>
+    </div>
 </div>

@@ -1,0 +1,32 @@
+<div class="cell-container" ng-click="$ctrl.select()" ng-style="{'background-color': $ctrl.color}">
+    <div>
+        <input class="cell-input"
+               type="text"
+               ng-model="$ctrl.value"/>
+    </div>
+    <div ng-show="$ctrl.show">
+        <h4>{{ $ctrl.value }}</h4>
+    </div>
+    <div ng-if="$ctrl.type == 'A'">
+        <button>A</button>
+    </div>
+    <div ng-if="$ctrl.type == 'B'">
+        <h5>B</h5>
+    </div>
+    <div ng-if="$ctrl.type == 'C'">
+        <cell value="$ctrl.value"></cell>
+    </div>
+    <div ng-if="$ctrl.type == 'D'">
+      <svg height="130" width="500">
+        <defs>
+          <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:1" />
+            <stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
+          </linearGradient>
+        </defs>
+        <ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad1)" />
+        <text fill="#ffffff" font-size="45" font-family="Verdana" x="50" y="86">SVG</text>
+        Sorry, your browser does not support inline SVG.
+      </svg>
+    </div>
+</div>
