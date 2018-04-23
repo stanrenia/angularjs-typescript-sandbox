@@ -25,6 +25,13 @@ export function mainConfig($stateProvider: StateProvider) {
         }
     };
 
+    const timelineState: Ng1StateDeclaration = {
+        name: "timeline",
+        url: '/timeline',
+        component: 'timelineComponent'
+    };
+
     $stateProvider.state(mainState);
     $stateProvider.state(helloState);
+    $stateProvider.state(timelineState);
 }

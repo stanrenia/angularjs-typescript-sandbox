@@ -1,0 +1,5 @@
+<div ng-click="$ctrl.toggle()">
+    <p>{{ $ctrl.data.label }}  {{ $ctrl.data.statut }}</p>
+
+    <div ng-if="$ctrl.isOpen">{{ $ctrl.data.details }}</div>
+</div>
